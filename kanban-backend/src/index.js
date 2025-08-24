@@ -1,9 +1,13 @@
+// Ensure DNS resolution prioritizes IPv4
+import dns from 'dns';
+dns.setDefaultResultOrder('ipv4first')
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { pool } from './config/database.js';
+;
 
 const app = express();
 // initialize middlewaresimport { pool } from './config/database.js';
